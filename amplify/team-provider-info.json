@@ -1,0 +1,23 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-bloodbowlrandomizer-dev-191551-authRole",
+            "UnauthRoleArn": "arn:aws:iam::486767323235:role/amplify-bloodbowlrandomizer-dev-191551-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::486767323235:role/amplify-bloodbowlrandomizer-dev-191551-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "amplify-bloodbowlrandomizer-dev-191551-deployment",
+            "UnauthRoleName": "amplify-bloodbowlrandomizer-dev-191551-unauthRole",
+            "StackName": "amplify-bloodbowlrandomizer-dev-191551",
+            "StackId": "arn:aws:cloudformation:eu-west-1:486767323235:stack/amplify-bloodbowlrandomizer-dev-191551/11ba9f90-21e6-11eb-8f08-02e14dedfcff",
+            "AmplifyAppId": "d2y096bpg6d6g"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d2y096bpg6d6g",
+                    "type": "cicd"
+                }
+            }
+        }
+    }
+}
