@@ -68,6 +68,25 @@ function App() {
   const [randomPicture, setRandomPicture] = React.useState(team_human);
   const [intervalPhase, setIntervalPhase] = React.useState(0);
   const [selectedImage, setSelectedImage] = React.useState(null);
+  const [isLoading, setIsLoading] = React.useState(false);
+
+  const cacheImages = async (teamArray) => {
+    const promises = await teamArray.map((team) => {
+      return new Promise(function (resolve, reject) {
+        const image = new Image();
+        image.src = team.pic;
+        image.onload = resolve();
+        image.onerror = reject();
+      });
+    });
+
+    await Promise.all(promises);
+    setIsLoading(false);
+  };
+
+  useEffect(() => {
+    cacheImages(teams);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
