@@ -1,10 +1,23 @@
+@font-face {
+  font-family: "BBFont";
+  src: local("BBFont"), url(./fonts/Gutcruncher.otf) format("OpenType");
+}
+
+h3 {
+  margin-top: -30px;
+  font-family: "BBFont";
+}
+
 .App {
   text-align: center;
 }
 
+.App-container {
+  background-color: #f6f6f6 !important;
+}
+
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  width: 300px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -26,7 +39,8 @@
 .App-container {
   z-index: 2;
   background-color: #ffffff;
-  border-radius: 10px;
+  border-radius: 100px !important;
+  margin-top: 50px !important;
   min-width: 300px;
   max-width: 80%;
   min-height: 200px;
@@ -39,16 +53,52 @@
 }
 
 .Team-picture {
-  animation: fadeInDown;
-  animation-duration: 1s;
   max-width: 200px;
-  max-height: 200px;
+  max-height: 180px;
+}
+
+.Team-picture-container {
+  width: 220px;
+  height: 200px;
+  border: 10px solid white;
+}
+
+.Spinning-picture {
+  width: 200px;
+  height: 180px;
+  transition: transform 0.1s;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+}
+
+.Team-picture-container img {
+  height: 180px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.Team-picture-container:hover {
+  box-shadow: 0px 0px 30px 9px rgba(203, 0, 0, 1);
+  cursor: pointer;
+}
+
+.Team-picture-container.selected {
+  box-shadow: 0px 0px 30px 9px rgba(203, 0, 0, 1);
+}
+
+.Spinning-picture.out {
+  transform: rotateY(0);
+}
+
+.Spinning-picture.out {
+  height: 180px;
+  width: 180px;
+  object-fit: cover;
 }
 
 .Randomize-button-container {
+  margin-top: 30px;
   display: flex;
-  height: 250px;
-  width: 250px;
 }
 
 .Randomize-button {
@@ -61,4 +111,19 @@
   height: 50px;
   width: 150px;
   margin: auto 10px !important;
+}
+
+.team-checkbox {
+  min-width: 210px;
+  max-height: 20px;
+  display: flex;
+}
+
+.Buttons {
+  margin: 20px 0;
+}
+
+.Team-name {
+  font-family: "BBfont";
+  font-size: 16px;
 }
