@@ -37,6 +37,7 @@ const teamPictures = [team_human, team_dwarf, team_highElves, team_orcs];
 
 const teams = [
   { name: "Amazons", selected: true, pic: team_amazons },
+  { name: "Bretonnians", selected: true, pic: team_brets },
   { name: "Chaos", selected: true, pic: team_chaos },
   { name: "Chaos Dwarfs", selected: true, pic: team_chaosdwarf },
   { name: "Dwarfs", selected: true, pic: team_dwarf },
@@ -71,7 +72,7 @@ function App() {
   useEffect(() => {
     const interval = setInterval(() => {
       if (spinning) {
-        let randomNumber = Math.floor(Math.random() * 22);
+        let randomNumber = Math.floor(Math.random() * 23);
         /* if (intervalPhase % 2 === 0) {
           setRandomPicture(teamPictures[randomNumber]);
         } */
@@ -93,7 +94,7 @@ function App() {
   };
 
   const randomizeNewTeam = () => {
-    const randomNumber = Math.floor(Math.random() * 22);
+    const randomNumber = Math.floor(Math.random() * 23);
     let newRandomTeams = [...randomizedTeams];
     const newRandomTeam = teams[randomNumber];
     if (newRandomTeam.selected) {
