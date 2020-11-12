@@ -258,6 +258,13 @@ function App() {
           </Grid>
         </Paper>
       </header>
+      {teams.map((team) => {
+        return (
+          <div className="HiddenImage">
+            <img src={team.pic} alt="" />
+          </div>
+        );
+      })}
     </div>
   );
 }
